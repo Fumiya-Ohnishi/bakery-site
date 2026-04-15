@@ -1,0 +1,141 @@
+.footer {
+  background-color: var(--color-brown-dark);
+  padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  color: rgba(255, 248, 240, 0.65);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Brand column */
+.brand {}
+
+.logo {
+  font-family: var(--font-serif-en);
+  font-size: 1.5rem;
+  color: var(--color-cream);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.logo .dot {
+  color: var(--color-terracotta-light);
+}
+
+.tagline {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  color: rgba(255, 248, 240, 0.4);
+  margin-bottom: var(--spacing-md);
+}
+
+.brandText {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: rgba(255, 248, 240, 0.55);
+  max-width: 280px;
+}
+
+/* Nav columns */
+.navColumn {}
+
+.navTitle {
+  font-family: var(--font-serif-ja);
+  font-size: 0.9375rem;
+  color: var(--color-cream);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 248, 240, 0.1);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.navItem {
+  font-size: 0.875rem;
+  color: rgba(255, 248, 240, 0.55);
+  cursor: pointer;
+  transition: color var(--transition-base);
+  background: none;
+  border: none;
+  font-family: var(--font-sans-ja);
+  padding: 0;
+  text-align: left;
+}
+
+.navItem:hover {
+  color: var(--color-cream);
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid rgba(255, 248, 240, 0.08);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: rgba(255, 248, 240, 0.3);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.bottomLink {
+  font-size: 0.75rem;
+  color: rgba(255, 248, 240, 0.3);
+  cursor: pointer;
+  transition: color var(--transition-base);
+  background: none;
+  border: none;
+  font-family: var(--font-sans-ja);
+  padding: 0;
+}
+
+.bottomLink:hover {
+  color: rgba(255, 248, 240, 0.6);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    grid-column: span 1;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

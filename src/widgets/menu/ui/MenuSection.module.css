@@ -1,0 +1,88 @@
+.section {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-cream);
+}
+
+.filterRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.filterBtn {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-family: var(--font-sans-ja);
+  border: 2px solid var(--color-cream-border);
+  background-color: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-spring);
+}
+
+.filterBtn:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-brown-light);
+  color: var(--color-brown);
+}
+
+.filterBtn.active {
+  background-color: var(--color-brown-dark);
+  border-color: var(--color-brown-dark);
+  color: var(--color-cream);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* Scroll reveal */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:nth-child(2) { transition-delay: 0.08s; }
+.card:nth-child(3) { transition-delay: 0.16s; }
+.card:nth-child(4) { transition-delay: 0.24s; }
+.card:nth-child(5) { transition-delay: 0.32s; }
+.card:nth-child(6) { transition-delay: 0.40s; }
+
+/* Bread SVG illustrations */
+.breadIllust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

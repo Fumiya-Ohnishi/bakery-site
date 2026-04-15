@@ -1,0 +1,100 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans-ja);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition:
+    transform var(--transition-spring),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
+  cursor: pointer;
+  border: 2px solid transparent;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Primary */
+.primary {
+  background-color: var(--color-terracotta);
+  color: var(--color-warm-white);
+  border-color: var(--color-terracotta);
+  box-shadow: 0 4px 16px rgba(193, 98, 79, 0.3);
+}
+
+.primary:hover {
+  background-color: var(--color-terracotta-light);
+  box-shadow: 0 6px 24px rgba(193, 98, 79, 0.4);
+}
+
+/* Secondary */
+.secondary {
+  background-color: transparent;
+  color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+.secondary:hover {
+  background-color: var(--color-terracotta-pale);
+  box-shadow: var(--shadow-warm);
+}
+
+/* Ghost */
+.ghost {
+  background-color: rgba(255, 248, 240, 0.15);
+  color: var(--color-warm-white);
+  border-color: rgba(255, 248, 240, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.ghost:hover {
+  background-color: rgba(255, 248, 240, 0.25);
+  border-color: rgba(255, 248, 240, 0.8);
+}
+
+/* Brown */
+.brown {
+  background-color: var(--color-brown-dark);
+  color: var(--color-cream);
+  border-color: var(--color-brown-dark);
+}
+
+.brown:hover {
+  background-color: var(--color-brown);
+  box-shadow: 0 6px 20px rgba(92, 61, 46, 0.3);
+}
+
+/* Sizes */
+.sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.lg {
+  padding: 1.125rem 2.5rem;
+  font-size: 1.0625rem;
+}
+
+/* Icon */
+.icon {
+  flex-shrink: 0;
+  transition: transform var(--transition-spring);
+}
+
+.button:hover .icon {
+  transform: translateX(3px);
+}
