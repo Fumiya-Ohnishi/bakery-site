@@ -31,44 +31,41 @@
 }
 
 .cardStack {
-  position: relative;
-  height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 0;
 }
 
 .stackCard {
-  position: absolute;
   border-radius: var(--radius-2xl);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-md);
+  position: relative;
+  z-index: 0;
 }
 
 .stackCard1 {
-  top: 0;
-  left: 0;
-  width: 80%;
   background-color: var(--color-cream);
   box-shadow: var(--shadow-md);
+  margin-right: var(--spacing-2xl);
   animation: float 5s ease-in-out infinite;
 }
 
 .stackCard2 {
-  top: 80px;
-  right: 0;
-  width: 80%;
   background-color: var(--color-terracotta-pale);
   box-shadow: var(--shadow-md);
+  margin-left: var(--spacing-2xl);
   animation: float 6s ease-in-out infinite;
   animation-delay: 1s;
 }
 
 .stackCard3 {
-  bottom: 0;
-  left: 20px;
-  width: 75%;
   background-color: var(--color-green-pale);
   box-shadow: var(--shadow-md);
+  margin-right: var(--spacing-xl);
   animation: float 4.5s ease-in-out infinite;
   animation-delay: 2s;
 }
@@ -168,8 +165,16 @@
     grid-template-columns: 1fr;
   }
 
-  .cardStack {
-    height: 300px;
+  .stackCard1 {
+    margin-right: var(--spacing-xl);
+  }
+
+  .stackCard2 {
+    margin-left: var(--spacing-xl);
+  }
+
+  .stackCard3 {
+    margin-right: var(--spacing-md);
   }
 
   .visual {
